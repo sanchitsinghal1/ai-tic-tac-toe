@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+#  Unbeatable AI Tic-Tac-Toe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> **The Challenge:** I bet you can't win. (Spoiler: The best you can get is a Draw )
 
-## Available Scripts
+Welcome to my take on the classic Tic-Tac-Toe! I built this project not just to make a game, but to challenge myself with complex state management in **React** and understand how Game AI works under the hood.
 
-In the project directory, you can run:
+It uses the **Minimax Algorithm**, which basically means this AI has read the future and already knows how to block your next move.
 
-### `npm start`
+##  Why I Built This?
+Honestly, I was tired of building simple "To-Do List" apps. I wanted to build something that required **logic, recursion, and real-time decision making**.
+- **The Struggle:** Wrapping my head around the recursive calls for the Minimax algorithm was tricky at first!
+- **The Eureka Moment:** Watching the AI finally block my winning move for the first time felt amazing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  Key Features
+- ** Unbeatable AI:** It calculates every possible outcome. You literally cannot win against the 'Impossible' mode.
+- ** Zero Lag:** Optimized React hooks (`useState`, `useEffect`) ensure smooth gameplay.
+- ** Clean UI:** Minimalist design that looks great on both Mobile & Desktop.
+- ** Modes:**
+  - **Human vs AI:** Test your skills against the computer.
+  - **Human vs Human:** Play with a friend (because sometimes it's nice to actually win).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  How it Works (The Logic)
+The AI uses the **Minimax Algorithm**, a concept from Game Theory:
+1. It simulates **all possible future moves** in the game tree.
+2. It assigns a score: **+10** (AI Wins), **-10** (AI Loses), **0** (Draw).
+3. It always picks the move that maximizes its score while minimizing yours.
+*(Basically, it thinks 10 steps ahead of you!)*
 
-### `npm test`
+##  Tech Stack
+- **Frontend:** React.js
+- **Styling:** CSS3 (Modern Flexbox/Grid)
+- **Deployment:** Vercel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run Locally
+Want to tweak the code or try to beat the logic locally?
 
-### `npm run build`
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/sanchitsinghal1/ai-tic-tac-toe.git
+Install dependencies:
+Bash
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the game:
+Bash
+npm start
+👨‍💻 Connect with Me
+Built with ❤️ and a lot of coffee by Sanchit Singhal.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you enjoyed the challenge, feel free to drop a ⭐ Star on this repo!
