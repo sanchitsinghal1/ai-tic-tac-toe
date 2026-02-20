@@ -1,0 +1,118 @@
+
+:root {
+  --primary: #5848e6;
+  --accent: #f87c57;
+  --cell-bg: #f5f6fa;
+  --cell-hover: #edeffd;
+  --cell-active: #e2e8ff;
+  --win-bg: #dbffdb;
+}
+
+body {
+  background: linear-gradient(120deg, #ece9f7 0%, #fbf9ff 100%);
+  min-height: 100vh;
+  font-family: 'Inter', 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 420px;
+  margin: 40px auto 0 auto;
+  padding: 32px 20px 40px 20px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 48px 0 rgba(30,29,89,0.12);
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 0 auto 28px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: var(--cell-bg);
+  font-size: 2.6rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(94,92,170,0.08);
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.14s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+
+.cell:hover {
+  background: var(--cell-hover);
+  box-shadow: 0 4px 18px rgba(140,130,255,0.12);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.cell:active {
+  background: var(--cell-active);
+}
+
+.cell.x {
+  color: var(--primary);
+  text-shadow: 0 2px 25px #acb6ff33;
+}
+
+.cell.o {
+  color: var(--accent);
+  text-shadow: 0 2px 25px #f87c5733;
+}
+
+.cell.win {
+  background: var(--win-bg) !important;
+  border: 2.4px solid #32c76f;
+  box-shadow: 0 0 18px #75ffbb33;
+  position: relative;
+  animation: winner-blink 0.8s alternate infinite;
+}
+
+@keyframes winner-blink {
+  from { box-shadow: 0 0 18px #75ffbb33; }
+  to   { box-shadow: 0 0 32px #b0ffdd77; }
+}
+
+button {
+  margin-top: 18px;
+  padding: 13px 32px;
+  font-size: 1.06rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(146,140,255,0.08);
+  transition: background 0.26s, transform .14s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  transform: translateY(-1.5px) scale(1.03);
+}
+
+h2 {
+  margin-top: 24px;
+  font-size: 1.38rem;
+  color: #30a46c;
+  text-shadow: 0 4px 16px #b3ebc5ad;
+}
